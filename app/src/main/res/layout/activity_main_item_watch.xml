@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="10dp"
+    android:paddingEnd="12dp"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_description1"
+        android:layout_width="33dp"
+        android:layout_height="wrap_content"
+        android:text="@string/_10"
+        android:textColor="#00A0E9"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_vertical" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginStart="20dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/watch"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_content1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/watchvideo"
+            android:textColor="#c0c0c0"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_button1"
+        android:layout_width="64dp"
+        android:layout_height="24dp"
+        android:text="@string/towatch"
+        android:textColor="#FFF"
+        android:textSize="13sp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/tv_button" />
+</LinearLayout>
