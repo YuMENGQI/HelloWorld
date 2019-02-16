@@ -22,7 +22,7 @@ public class Network {
     public Network() {
         Gson gson = new GsonBuilder().setLenient().create();
         retrofit = new Retrofit.Builder()
-                .baseUrl("http://staservice.fooww.com/Mobile/")
+                .baseUrl("http://stanew.fooww.com/")
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 //.addConverterFactory(ScalarsConverterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create(gson))

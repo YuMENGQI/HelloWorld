@@ -6,5 +6,5 @@ package com.android.byc.hello.presenter;
  * @date 2019/2/16 13:14
  * @description
  */
-class DaoSession {
+public class DaoSession {
 }

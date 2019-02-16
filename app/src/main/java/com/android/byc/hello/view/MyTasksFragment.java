@@ -60,6 +60,7 @@ public class MyTasksFragment extends Fragment {
         presenter.fetchDataFromLocal();
         presenter.fetchDataFromRemote();
         List<CurrencyTasksEntity> currencyTasks = new ArrayList<>();
+
         currencyTasks.add(new CurrencyTasksEntity(1L,"观看梵讯大学课程", "观看完整的课程视频才得房屋币", 10,1, " ",0));
         currencyTasks.add(new CurrencyTasksEntity(2L,"分享梵讯大学课程", "单个视频需他人浏览累计超过50次", 10,1, " ",0));
         currencyTasks.add(new CurrencyTasksEntity(3L,"添加好友", "主动添加好友，每天最多4次", 5,1, " ",0));

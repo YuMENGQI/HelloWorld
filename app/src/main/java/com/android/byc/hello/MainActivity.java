@@ -15,12 +15,16 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.android.byc.hello.adapter.MyTaskAdapter;
+import com.android.byc.hello.db.CurrencyTaskRecordsEntity;
+import com.android.byc.hello.db.CurrencyTasksEntity;
 import com.android.byc.hello.network.CoinsTaskApi;
 import com.android.byc.hello.network.CurrencyAmountResponse;
+import com.android.byc.hello.network.Data;
 import com.android.byc.hello.network.Network;
 import com.android.byc.hello.network.Response;
-
+import com.android.byc.hello.presenter.DaoSession;
 import com.android.byc.hello.util.FragmentUtil;
+import com.android.byc.hello.view.CurrencyTaskInfo;
 import com.android.byc.hello.view.MyTasksFragment;
 import com.android.byc.hello.view.NoScrollViewPager;
 import com.android.byc.hello.view.RankingListFragment;
@@ -33,6 +37,7 @@ import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
+import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -44,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView tvShop;
     private TextView tvMyTask;
     private TextView tvRankingList;
+    private TextView tvCoinsCount;
     NoScrollViewPager viewPager;
     private List<CoinsTask> datas;
     private ScrollView coinsTaskLayout;
@@ -66,6 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             view1 = findViewById(R.id.my_task_bar);
             view2 = findViewById(R.id.ranking_list_bar);
             viewPager = findViewById(R.id.view_pager);
+            tvCoinsCount = findViewById(R.id.tv_coins_count);
             view2.setOnClickListener(this);
             view1.setOnClickListener(this);
             view1.setSelected(true);
@@ -178,6 +185,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void getCurrencyAmount() {
         String pkUser = "6342ba83-d37d-47a5-b629-8c500d52a374";
+
+
         Network network = Network.getInstance();
         CoinsTaskApi coinsTaskApi = network.getCoinsTaskApi();
         coinsTaskApi
@@ -188,7 +197,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     @Override
                     public void accept(Response<CurrencyAmountResponse> response) {
                         int currencyAmount = response.getData().getCurrencyCoinsAmount();
-                        tvRecordDetail.setText(currencyAmount);
+                        tvCoinsCount.setText(currencyAmount + "");
                     }
                 })
                 .subscribe(new Observer<Response<CurrencyAmountResponse>>() {
@@ -211,5 +220,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void refreshMyCoins() {
 
     }
+
 
 }

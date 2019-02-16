@@ -9,7 +9,8 @@ import com.google.gson.annotations.SerializedName;
  * @description
  */
 public class CurrencyAmountResponse {
-    @SerializedName("CurrencyCoinsAmount")
+
+    @SerializedName("CurrencyAmount")
     private int currencyCoinsAmount;
 
     public int getCurrencyCoinsAmount() {
