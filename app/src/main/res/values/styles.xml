@@ -18,4 +18,9 @@
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">true</item>
     </style>
+    <style name="line_separator">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/dark_gray</item>
+    </style>
 </resources>

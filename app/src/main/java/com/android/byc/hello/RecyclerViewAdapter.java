@@ -9,8 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import java.util.List;
-public class RecyclerViewAdapter extends
-        RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>{
+public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>{
     private  Context context;
     private  List<CoinsTask> datas;
    // private AdapterView.OnItemClickListener clickListener;
@@ -67,10 +66,10 @@ public class RecyclerViewAdapter extends
         private Button buttons;
         public  MyViewHolder(View itemView){
             super(itemView);
-            scores= itemView.findViewById(R.id.tv_description1);
-            titles= itemView.findViewById(R.id.tv_title1);
-            contents= itemView.findViewById(R.id.tv_content1);
-            buttons= itemView.findViewById(R.id.bt_button1);
+            scores= itemView.findViewById(R.id.plus_score);
+            titles= itemView.findViewById(R.id.my_task_title);
+            contents= itemView.findViewById(R.id.my_task_describtion);
+            buttons= itemView.findViewById(R.id.my_task_button);
         }
     }
 }

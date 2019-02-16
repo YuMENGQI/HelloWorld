@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/TitleBarGuideLayout"
+    android:layout_width="match_parent"
+    android:layout_height="54dp"
+    android:background="@drawable/bg_gradient">
+
+    <Button
+        android:id="@+id/TitleBarGuideBack"
+        android:layout_width="88dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:paddingStart="15dp"
+        android:background="@null"
+        android:drawableStart="@drawable/ic_activity_main_back"/>
+
+    <ImageView
+        android:id="@+id/TitleBarGuideBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="50dp"
+        android:visibility="gone"
+        android:background="@null"
+        android:layout_alignParentEnd="true"/>
+
+    <Button
+        android:id="@+id/TitleBarGuideForward"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text=""
+        android:background="@null"
+        android:layout_marginEnd="15dp"
+        android:textColor="@drawable/btnedit"
+        android:textSize="17sp"
+        android:layout_alignParentEnd="true"
+        android:gravity="right|center_vertical"/>
+
+    <ImageButton
+        android:id="@+id/TitleBarGuideSecondDot"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_dot"
+        android:visibility="gone"
+        android:background="@null"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:layout_toStartOf="@+id/TitleBarGuideDot"/>
+
+    <ImageButton
+        android:id="@+id/TitleBarGuideDot"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_dot"
+        android:visibility="gone"
+        android:background="@null"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:id="@+id/TitleBarGuideText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginStart="88dp"
+        android:layout_marginEnd="100dp"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>
+

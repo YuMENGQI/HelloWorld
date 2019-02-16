@@ -3,4 +3,15 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#c0c0c0</color>
+    <color name="dark_gray">#d6d6d6</color>
+    <color name="white">#ffffff</color>
+    <color name="text_blue">#3492e9</color>
+    <color name="text_black">#333333</color>
+    <color name="gray_no_effect">#999999</color>
+    <color name="coins_main">@color/text_blue</color>
+    <color name="common_body_background_color">#F5F5F5</color>
+    <color name="bg_gradient_end_color">#0085FF</color>
+    <color name="bg_gradient_start_color">#00AAFF</color>
+    <color name="bg_sel">#4682B4</color>
+    <color name="listbackground_on">#D4D4D4</color>
 </resources>
