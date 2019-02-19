@@ -26,4 +26,26 @@ public interface CoinsTaskApi {
             @Field("PKUser") String pKUser,
             @Field("UpdateTime") String updateTime
     );
+    /**
+     * 获取排行榜信息
+     * @param pKCompany pKCompany
+     * @return 获取排行榜信息
+     */
+    @FormUrlEncoded
+    @POST("/Mobile/GetCurrencyList")
+    Observable<Response<List<Data>>> getCurrencyList(
+            @Field("PKCompany") String pKCompany
+    );
+    /**
+     * 获取房屋币收入支出列表
+     * @param pKUser pKUser
+     * @param updateTime updateTime
+     * @return 房屋币收入支出列表
+     */
+    @FormUrlEncoded
+    @POST("/Mobile/getCurrencyRecords")
+    Observable<Response<List<Data>>> getCurrencyRecords(
+            @Field("PKUser") String pKUser,
+            @Field("UpdateTime") String updateTime
+    );
 }

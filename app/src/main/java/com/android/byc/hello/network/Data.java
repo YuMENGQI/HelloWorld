@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.text.TextUtils;
 
 import com.android.byc.hello.util.Utility;
+import com.google.gson.annotations.SerializedName;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -28,6 +29,7 @@ import java.util.List;
 public class Data {
         public String TableName;
         public List<String> DataColumn = new ArrayList<>();
+        @SerializedName("DataRowValue")
         public List<List<String>> DataRow = new LinkedList<>();
 
     public Data() {

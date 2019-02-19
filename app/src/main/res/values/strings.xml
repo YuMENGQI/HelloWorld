@@ -28,4 +28,13 @@
     <string name="_2">已成功邀请2人开通手机梵讯</string>
     <string name="toinvite">去邀请</string>
     <string name="_10">+10</string>
+    <string name="txt_rank">排名</string>
+    <string name="txt_name">姓名</string>
+    <string name="txt_coins">房屋币</string>
+    <string name="txt_watch_course">观看梵讯大学课程</string>
+    <string name="mock_time">2017-10-10 08:15</string>
+    <string name="plus_200">+200</string>
+    <string name="txt_income">收入</string>
+    <string name="txt_expense">支出</string>
+    <string name="txt_coins_record_detail">房屋币明细</string>
 </resources>

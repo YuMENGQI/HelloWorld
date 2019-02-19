@@ -13,11 +13,11 @@ public class CurrencyAmountResponse {
     @SerializedName("CurrencyAmount")
     private int currencyCoinsAmount;
 
-    public int getCurrencyCoinsAmount() {
+    public int getCurrencyAmount() {
         return currencyCoinsAmount;
     }
 
-    public void setCurrencyCoinsAmount(int currencyCoinsAmount) {
+    public void setCurrencyAmount(int currencyCoinsAmount) {
         this.currencyCoinsAmount = currencyCoinsAmount;
     }
 }

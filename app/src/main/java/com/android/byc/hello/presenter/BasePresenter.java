@@ -9,8 +9,8 @@ import android.content.Context;
  * @description
  */
 public abstract class BasePresenter <T>{
-    private T view;
-    private Context context;
+    public T view;
+    public Context context;
     public DBManager dbManager;
     public DaoSession daoSession;
 }

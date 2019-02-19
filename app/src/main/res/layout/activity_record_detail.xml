@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/common_body_background_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/TitleBarGuideLayout"
+        layout="@layout/titlebar_guide"/>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <RelativeLayout
+            android:id="@+id/income_container"
+            android:paddingStart="15dp"
+            android:paddingEnd="0dp"
+            android:background="@drawable/listitem_sel"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_income"
+                android:text="@string/txt_income"
+                android:textSize="14sp"
+                android:textColor="@color/text_blue"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:id="@+id/income_bar"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_selected_bar"
+                android:layout_alignParentBottom="true"
+                android:layout_width="25dp"
+                android:layout_height="3dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/expense_container"
+            android:paddingEnd="15dp"
+            android:paddingStart="0dp"
+            android:background="@drawable/listitem_sel"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_expense"
+                android:text="@string/txt_expense"
+                android:textSize="14sp"
+                android:textColor="@color/gray_no_effect"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:id="@+id/expense_bar"
+                android:visibility="invisible"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_selected_bar"
+                android:layout_alignParentBottom="true"
+                android:layout_width="25dp"
+                android:layout_height="3dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_record_detail"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

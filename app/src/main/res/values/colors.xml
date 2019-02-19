@@ -14,4 +14,6 @@
     <color name="bg_gradient_start_color">#00AAFF</color>
     <color name="bg_sel">#4682B4</color>
     <color name="listbackground_on">#D4D4D4</color>
+    <color name="textcolor_darkgray">#333333</color>
+    <color name="textcolor_red">#f77373</color>
 </resources>

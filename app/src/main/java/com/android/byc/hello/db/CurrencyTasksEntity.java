@@ -1,4 +1,9 @@
 package com.android.byc.hello.db;
+import org.greenrobot.greendao.annotation.Entity;
+import org.greenrobot.greendao.annotation.Generated;
+import org.greenrobot.greendao.annotation.Id;
+import org.greenrobot.greendao.annotation.Property;
+import org.greenrobot.greendao.annotation.Transient;
 
 import java.util.List;
 
@@ -8,19 +13,27 @@ import java.util.List;
  * @date 2019/2/15 10:24
  * @description
  */
+@Entity(nameInDb = "CurrencyTasks")
 public class CurrencyTasksEntity {
-
+    @Id
     public Long id;
+    @Property(nameInDb = "Title")
     public String title = "";
+    @Property (nameInDb = "Description")
     public String description = "";
+    @Property (nameInDb = "Amount")
     public int amount;
+    @Property(nameInDb = "LimitCount")
     public int limitCount;
+    @Property(nameInDb = "CreateTime")
     public String createTime = "";
+    @Property(nameInDb = "SortValue")
     public int sortValue;
 
+    @Transient
     private List<CurrencyTaskRecordsEntity> currencyTaskRecords;
 
-
+    @Generated(hash = 432242342)
     public CurrencyTasksEntity(Long id, String title, String description, int amount,
                                int limitCount, String createTime, int sortValue) {
         this.id = id;
@@ -32,6 +45,7 @@ public class CurrencyTasksEntity {
         this.sortValue = sortValue;
     }
 
+    @Generated(hash = 698119328)
     public CurrencyTasksEntity() {
     }
 

@@ -21,6 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".view.SecondActivity" android:theme="@style/Title"/>
+        <activity android:name=".view.RecordDetailActivity" android:theme="@style/Title"/>
 </application>
 
 </manifest>
