@@ -7,7 +7,6 @@ import android.util.Log;
 import com.android.byc.hello.model.ModelHelper;
 import com.android.byc.hello.model.TableMapHelper;
 import com.android.byc.hello.network.ISQLiteOperate;
-import com.android.byc.hello.presenter.DaoSession;
 import com.android.byc.hello.util.Utility;
 
 import org.greenrobot.greendao.AbstractDaoMaster;
@@ -16,6 +15,7 @@ import org.greenrobot.greendao.query.QueryBuilder;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+
 
 /**
  * @author yu
@@ -194,7 +194,7 @@ public class SQLiteDataProxyForGreenDao implements ISQLiteOperate {
 
     @Override
     public <T> boolean insertOrReplace(T entity) {
-        return  execSQL(ModelHelper.createSQLs(entity));
+        return  execSQLs(ModelHelper.createSQLs(entity));
     }
 
     @Override

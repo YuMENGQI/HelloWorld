@@ -4,6 +4,7 @@ package com.android.byc.hello.presenter;
 import android.content.Context;
 import android.database.Cursor;
 
+import com.android.byc.hello.db.DaoSession;
 import com.android.byc.hello.db.SQLiteDataProxyForGreenDao;
 import com.android.byc.hello.network.ISQLiteOperate;
 
@@ -39,7 +40,7 @@ public class DBManager {
     }
 
     public DBManager() {
-        //this.context = AppLike.gInstance;
+        //this.context = .gInstance;
         sqLiteOperate = SQLiteDataProxyForGreenDao.getInstance();
     }
 

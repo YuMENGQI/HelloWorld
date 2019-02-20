@@ -1,5 +1,8 @@
 package com.android.byc.hello.db;
 
+import com.android.byc.hello.presenter.UUID2BytesConverter;
+
+import org.greenrobot.greendao.annotation.Convert;
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Generated;
 import org.greenrobot.greendao.annotation.Property;
@@ -28,6 +31,7 @@ public class ChatMessageIntegral {
      * pk键
      */
     @Property(nameInDb = "PKChatCurrency")
+    @Convert(converter = UUID2BytesConverter.class, columnType = byte[].class)
     public UUID PKChatCurrency;
 
 

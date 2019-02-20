@@ -12,5 +12,4 @@ public abstract class BasePresenter <T>{
     public T view;
     public Context context;
     public DBManager dbManager;
-    public DaoSession daoSession;
 }

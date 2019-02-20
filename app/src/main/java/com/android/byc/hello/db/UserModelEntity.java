@@ -2,6 +2,7 @@ package com.android.byc.hello.db;
 
 import com.android.byc.hello.network.EntityIgnore;
 import com.android.byc.hello.network.HttpResponse;
+import com.android.byc.hello.presenter.UUID2BytesConverter;
 
 import org.greenrobot.greendao.annotation.Convert;
 import org.greenrobot.greendao.annotation.Entity;
@@ -20,21 +21,27 @@ import java.util.UUID;
 @Entity(nameInDb = "UserModel")
 public class UserModelEntity extends HttpResponse {
     @Property(nameInDb = "PKUser")
+    @Convert(converter = UUID2BytesConverter.class, columnType = byte[].class)
     public UUID PKUser;
 
     @Property(nameInDb = "PKCompanyGroup")
+    @Convert(converter = UUID2BytesConverter.class, columnType = byte[].class)
     public UUID PKCompanyGroup;
 
     @Property(nameInDb = "PKCompanyDepartment")
+    @Convert(converter = UUID2BytesConverter.class, columnType = byte[].class)
     public UUID PKCompanyDepartment;
 
     @Property(nameInDb = "PKCompanyRegion")
+    @Convert(converter = UUID2BytesConverter.class, columnType = byte[].class)
     public UUID PKCompanyRegion;
 
     @Property(nameInDb = "PKCompany")
+    @Convert(converter = UUID2BytesConverter.class, columnType = byte[].class)
     public UUID PKCompany;
 
     @Property(nameInDb = "PKFoowwRole")
+    @Convert(converter = UUID2BytesConverter.class, columnType = byte[].class)
     public UUID PKFoowwRole;
 
     @Property(nameInDb = "Email")

@@ -2,8 +2,8 @@ package com.android.byc.hello.network;
 
 import android.database.Cursor;
 
+import com.android.byc.hello.db.DaoSession;
 import com.android.byc.hello.db.SQLiteDataProxyForGreenDao;
-import com.android.byc.hello.presenter.DaoSession;
 
 import org.greenrobot.greendao.query.QueryBuilder;
 

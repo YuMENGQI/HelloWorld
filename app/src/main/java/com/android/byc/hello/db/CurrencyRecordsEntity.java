@@ -1,5 +1,8 @@
 package com.android.byc.hello.db;
 
+import com.android.byc.hello.presenter.UUID2BytesConverter;
+
+import org.greenrobot.greendao.annotation.Convert;
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Generated;
 import org.greenrobot.greendao.annotation.Id;
@@ -28,9 +31,11 @@ public class CurrencyRecordsEntity {
     /***/
     @NotNull
     @Property(nameInDb = "PKUser")
+    @Convert(converter = UUID2BytesConverter.class, columnType = byte[].class)
     public UUID pkUser;
     /***/
     @Property(nameInDb = "PKCompany")
+    @Convert(converter = UUID2BytesConverter.class, columnType = byte[].class)
     public UUID pkCompany;
     /***/
     @Property(nameInDb = "CurrencyTaskID")

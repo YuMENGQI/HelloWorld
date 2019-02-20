@@ -31,7 +31,7 @@ public abstract class ModelHelper {
                 || field.getAnnotation(EntityIgnore.class) != null;
     }
 
-    public static <T> String createSQLs(T entity) {
+    public static <T> String[] createSQLs(T entity) {
         String[] sqls = new String[3];
         Class curClass = entity.getClass();
         Field[] fields = curClass.getFields();
