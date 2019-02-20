@@ -19,14 +19,11 @@ public class MyApplication extends Application {
 
     private static DaoSession daoSession;
 
-    private MyDatabaseHelper dbHelper;
     public void onCreate() {
         super.onCreate();
         Stetho.initializeWithDefaults(this);
-        dbHelper = new MyDatabaseHelper(this, "HouseCoins.db", null, 1);
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
-        DaoMaster.createAllTables(db, true);
-        DaoMaster daoMaster = new DaoMaster(db) ;
+        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(this, "HouseCoins.db");
+        DaoMaster daoMaster = new DaoMaster(helper.getWritableDb()) ;
         daoSession = daoMaster.newSession();
     }
 

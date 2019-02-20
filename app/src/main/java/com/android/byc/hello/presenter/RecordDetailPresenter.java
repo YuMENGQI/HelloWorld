@@ -88,7 +88,7 @@ public class RecordDetailPresenter extends BasePresenter<IRecordDetailContract.V
             @Override
             public List<CurrencyRecordsEntity> call() {
                return MyApplication.getDaoSession().getCurrencyRecordsEntityDao()
-                       .queryRaw("where PKUser=" + ConvertUUIDToHexString(pkUser) , " order by CreateTime DESC");
+                       .queryRaw("where PKUser=" + ConvertUUIDToHexString(pkUser) + " order by CreateTime DESC");
             }
         };
 
@@ -126,12 +126,6 @@ public class RecordDetailPresenter extends BasePresenter<IRecordDetailContract.V
                     @Override
                     public void accept(List<CurrencyRecordsEntity> partList) {
                         MyApplication.getDaoSession().getCurrencyRecordsEntityDao().insertOrReplaceInTx(partList);
-                    }
-                })
-                .map(new Function<List<CurrencyRecordsEntity>, List<CurrencyRecordsEntity>>() {
-                    @Override
-                    public List<CurrencyRecordsEntity> apply(List<CurrencyRecordsEntity> partList) throws Exception {
-                        return callable.call();
                     }
                 })
                 .observeOn(AndroidSchedulers.mainThread())
